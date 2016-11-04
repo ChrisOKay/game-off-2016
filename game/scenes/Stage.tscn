@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=6 format=1]
 
-[ext_resource path="res://BackgroundScrolling.gd" type="Script" id=1]
-[ext_resource path="res://images/city-skyline-moon_seamless.jpg" type="Texture" id=2]
+[ext_resource path="res://Moon.gd" type="Script" id=1]
+[ext_resource path="res://images/city-moon.jpg" type="Texture" id=2]
+[ext_resource path="res://BackgroundScrolling.gd" type="Script" id=3]
+[ext_resource path="res://images/city-skyline.png" type="Texture" id=4]
+[ext_resource path="res://images/Vignette.png" type="Texture" id=5]
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,14 +21,35 @@ scroll/limit_begin = Vector2( 0, 0 )
 scroll/limit_end = Vector2( 0, 0 )
 scroll/ignore_camera_zoom = true
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Moon" type="ParallaxLayer" parent="ParallaxBackground"]
 
 motion/scale = Vector2( 1, 1 )
 motion/offset = Vector2( 0, 0 )
 motion/mirroring = Vector2( 1267, 0 )
 script/script = ExtResource( 1 )
 
-[node name="TextureFrame" type="TextureFrame" parent="ParallaxBackground/ParallaxLayer"]
+[node name="TextureFrame" type="TextureFrame" parent="ParallaxBackground/Moon"]
+
+rect/scale = Vector2( 0.66, 0.66 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="Skyline" type="ParallaxLayer" parent="ParallaxBackground"]
+
+motion/scale = Vector2( 1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 1267, 0 )
+script/script = ExtResource( 3 )
+
+[node name="TextureFrame" type="TextureFrame" parent="ParallaxBackground/Skyline"]
 
 rect/scale = Vector2( 0.66, 0.66 )
 focus/ignore_mouse = true
@@ -36,10 +60,10 @@ margin/left = 0.0
 margin/top = 0.0
 margin/right = 1920.0
 margin/bottom = 1200.0
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 stretch_mode = 0
 
-[node name="Particles2D" type="Particles2D" parent="ParallaxBackground/ParallaxLayer"]
+[node name="Particles2D" type="Particles2D" parent="ParallaxBackground/Skyline"]
 
 config/amount = 500
 config/lifetime = 7.0
@@ -62,5 +86,26 @@ params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
 randomness/gravity_strength = 1.0
 color/color = Color( 0.644073, 0.785156, 0.785156, 1 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="TextureFrame" type="TextureFrame" parent="HUD"]
+
+rect/scale = Vector2( 0.54, 0.66 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1920.0
+margin/bottom = 1200.0
+texture = ExtResource( 5 )
+stretch_mode = 0
 
 

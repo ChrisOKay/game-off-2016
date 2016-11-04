@@ -12,7 +12,7 @@ func _ready():
 
 func _fixed_process(delta):
 	var mypos = get_pos()
-	mypos.x -= 50 * delta
+	mypos.x -= 20 * delta
 	if mypos.x < -1267: mypos.x = 0
 	set_pos(mypos)
 
