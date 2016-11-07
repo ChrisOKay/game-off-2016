@@ -18,6 +18,10 @@ func _fixed_process(delta):
 	if Input.is_key_pressed(KEY_RIGHT):
 		mypos.x += 350 * delta
 		get_node("AnimatedSprite").set_flip_h(false)
-	if Input.is_key_pressed(KEY_UP): mypos.y -= 350 * delta
-	if Input.is_key_pressed(KEY_DOWN): mypos.y += 350 * delta
-	set_pos(mypos)
+	if Input.is_key_pressed(KEY_UP):
+		mypos.y -= 350 * delta
+		set_z(mypos.y)
+	if Input.is_key_pressed(KEY_DOWN):
+		mypos.y += 350 * delta
+		set_z(mypos.y)
+	move_to(mypos)
