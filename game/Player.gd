@@ -24,4 +24,8 @@ func _fixed_process(delta):
 	if Input.is_key_pressed(KEY_DOWN):
 		mypos.y += 350 * delta
 		set_z(mypos.y)
-	move_to(mypos)
+	
+	var motion = move_to(mypos)
+	if is_colliding():
+		var n = get_collision_normal()
+		n.slide(motion)
