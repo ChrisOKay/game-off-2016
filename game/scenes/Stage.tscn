@@ -157,6 +157,7 @@ scale = Vector2( 1, 1 )
 
 [node name="TextureFrame" type="TextureFrame" parent="HUD"]
 
+visibility/opacity = 0.8
 rect/scale = Vector2( 0.54, 0.66 )
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -187,6 +188,7 @@ script/script = ExtResource( 9 )
 transform/scale = Vector2( 0.3, 0.3 )
 frames = SubResource( 2 )
 animation = "default"
+frame = 5
 playing = true
 __meta__ = { "_edit_lock_":true }
 
