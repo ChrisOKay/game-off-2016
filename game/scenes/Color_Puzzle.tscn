@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/Color_Puzzle.gd" type="Script" id=1]
 [ext_resource path="res://Circles.gd" type="Script" id=2]
 
-[sub_resource type="StyleBoxFlat" id=2]
+[sub_resource type="StyleBoxFlat" id=1]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -16,7 +16,7 @@ border_size = 0
 border_blend = true
 draw_bg = true
 
-[sub_resource type="StyleBoxFlat" id=1]
+[sub_resource type="StyleBoxFlat" id=2]
 
 content_margin/left = -1.0
 content_margin/right = -1.0
@@ -43,8 +43,8 @@ margin/left = 28.0
 margin/top = 32.0
 margin/right = 436.0
 margin/bottom = 63.0
-custom_styles/grabber_hilite = SubResource( 2 )
-custom_styles/focus = SubResource( 1 )
+custom_styles/grabber_hilite = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
 range/min = 0.0
 range/max = 255.0
 range/step = 1.0
@@ -82,8 +82,8 @@ margin/left = 28.0
 margin/top = 65.0
 margin/right = 436.0
 margin/bottom = 96.0
-custom_styles/grabber_hilite = SubResource( 2 )
-custom_styles/focus = SubResource( 1 )
+custom_styles/grabber_hilite = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
 range/min = 0.0
 range/max = 255.0
 range/step = 1.0
@@ -121,8 +121,8 @@ margin/left = 29.0
 margin/top = 100.0
 margin/right = 437.0
 margin/bottom = 131.0
-custom_styles/grabber_hilite = SubResource( 2 )
-custom_styles/focus = SubResource( 1 )
+custom_styles/grabber_hilite = SubResource( 1 )
+custom_styles/focus = SubResource( 2 )
 range/min = 0.0
 range/max = 255.0
 range/step = 1.0
@@ -170,10 +170,28 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
+[node name="Button" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 502.0
+margin/top = 19.0
+margin/right = 536.0
+margin/bottom = 39.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "X"
+flat = false
+
 [connection signal="value_changed" from="red" to="." method="_on_red_value_changed"]
 
 [connection signal="value_changed" from="green" to="." method="_on_green_value_changed"]
 
 [connection signal="value_changed" from="blue" to="." method="_on_blue_value_changed"]
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 
 

@@ -42,3 +42,7 @@ func _on_green_value_changed( value ):
 func _on_blue_value_changed( value ):
 	get_node("blue/lbl").set_text("%X" % [value])
 	update()
+
+
+func _on_Button_pressed():
+	hide() 
