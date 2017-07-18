@@ -14,3 +14,7 @@ Will you be able to defeat his forces, assemble all lights and bring the sun bac
 ## Chapter 1 - Roppongi-eki
 
 After a lucid dream brought to you by the gods to outline your mission, you wake up in your room. There's not much you can see or do, but light is shining through the only door of the room. There's a map on the wall, and the light coming from the door is illuminating the target of you first mission: "Roppongi-eki" - the deepest subway station in Tokyo. To find the first light, you need to descend to the Tokyo underworld.
+
+## Chapter 2 - Sumidagawa Fireworks Festival
+
+After discovering the first of the sacred lights in the Tokyo underground and stealing it back from Susano'os daughter Suseribime, you head back to your home to contact the gods for the next hint. They tell you that Susano'o is furious about your first success and now plans to destroy one of the lights in a spectacular explosion at the Sumidagawa Fireworks Festival to demonstrate his power. You need to stop him!
