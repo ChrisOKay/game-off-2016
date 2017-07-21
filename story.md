@@ -22,3 +22,15 @@ After discovering the first of the sacred lights in the Tokyo underground and st
 ## Chapter 3 - Yoyogi Park
 
 Susano'o was not able to destroy the light as planned, but there're still three lights in the hands of his minions. According to the gods, one of them is hiding in the woods of Yoyogi Park, next to the Meiji Shrine. It's not easy to find your way through the park in complete darkness, but finally you overcome all obstacles barring your way and enter the shrine to collect the third light.
+
+## Chapter 4 - Haneda Airport
+
+/* Lots of maze-like buildings full of technology suitable for puzzles and mini-games. */
+
+## Chapter 5 - Tokyo Tower
+
+/* The last light is hidden at the highest location. */
+
+## Epilogue
+
+/* All lights are collected and can now be assembled at Amaterasus cave. */
