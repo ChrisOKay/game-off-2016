@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://drum.gd" type="Script" id=1]
+[ext_resource path="res://images/drum.png" type="Texture" id=2]
+[ext_resource path="res://DrumBody.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+transform/pos = Vector2( 290.569, 262.267 )
+transform/scale = Vector2( 7.29279, 7.29279 )
+script/script = ExtResource( 1 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -25.0
+margin/top = -7.0
+margin/right = 8.0
+margin/bottom = 26.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = ExtResource( 2 )
+params/resize_mode = 1
+params/stretch_mode = 1
+script/script = ExtResource( 3 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+
+transform/pos = Vector2( -8.51421, -2.20502 )
+transform/scale = Vector2( 0.425045, 0.379852 )
+config/amount = 128
+config/lifetime = 4.0
+config/time_scale = 5.0
+config/emitting = false
+config/process_mode = 1
+config/half_extents = Vector2( 30, 0 )
+params/direction = 180.0
+params/spread = 5.0
+params/linear_velocity = 30.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 0.0
+params/gravity_strength = 9.81
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 1.5
+params/final_size = 1.5
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/linear_velocity = 0.2
+color/color = Color( 0.125312, 0.769531, 0.120239, 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 0.6
+one_shot = true
+autostart = false
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_TextureButton_pressed"]
+
+
