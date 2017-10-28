@@ -1,0 +1,337 @@
+[gd_scene load_steps=25 format=1]
+
+[ext_resource path="res://assets/Hintergrund Stadt.png" type="Texture" id=1]
+[ext_resource path="res://assets/Gras 1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Baum1.png" type="Texture" id=3]
+[ext_resource path="res://assets/Brücke.png" type="Texture" id=4]
+[ext_resource path="res://assets/Überlagern Multip..png" type="Texture" id=5]
+[ext_resource path="res://camera.gd" type="Script" id=6]
+[ext_resource path="res://Hero.gd" type="Script" id=7]
+[ext_resource path="res://assets/limboboy.png" type="Texture" id=8]
+
+[sub_resource type="CanvasItemShaderGraph" id=1]
+
+_code = {
+"fragment": "vec3 nd1sl0=SRC_COLOR.rgb;
+COLOR.rgb=nd1sl0;
+",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+_data = {
+"shaders": [ [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ], [ 0, 33, Vector2( 391, 29 ), null, null, [ 0, 1, 0 ], 1, 0, Vector2( 84, 38 ), null, null, [  ] ], [ 0, 33, Vector2( 350, 40 ), null, null, [  ], 1, 0, Vector2( 50, 40 ), null, null, [  ] ] ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+shader/shader = SubResource( 1 )
+shader/shading_mode = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -32.6978, 58.9779, -32.7245, 44.7096, -22.3162, 47.0725 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 96.4206, 58.5235, -32.6978, 58.9779, -22.3162, 47.0725, 1.60343, 48.3448 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 96.4206, 58.5235, 1.60343, 48.3448, 6.25806, 47.7995, 25.3291, 47.3451 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 96.4206, 58.5235, 25.3291, 47.3451, 43.883, 45.164, 59.0259, 44.8004, 78.6142, 45.9819 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 96.4206, 58.5235, 78.6142, 45.9819, 95.7741, 45.5275 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 3732.87, 782.956, 3913.87, 801.956, 3914.87, 918.956, 3616.87, 861.956, 3506.87, 765.955 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 3506.87, 765.955, 3616.87, 861.956, 3371.87, 846.956, 3273.88, 755.955 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 3273.88, 755.955, 3371.87, 846.956, 3100.87, 840.956, 2989.88, 749.955 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 2989.88, 749.955, 3100.87, 840.956, 2856.42, 837.956, 2738.88, 751.955 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 2738.88, 751.955, 2856.42, 837.956, 2602.42, 843.956, 2489.41, 760.955 )
+
+[sub_resource type="ConvexPolygonShape2D" id=13]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 2489.41, 760.955, 2602.42, 843.956, 2354.41, 861.956, 2236.41, 780.956 )
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 2236.41, 780.956, 2354.41, 861.956, 2140.41, 883.956, 1979.41, 807.956 )
+
+[sub_resource type="ConvexPolygonShape2D" id=15]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 1990.41, 914.956, 1979.41, 807.956, 2140.41, 883.956 )
+
+[sub_resource type="CapsuleShape2D" id=16]
+
+custom_solver_bias = 0.0
+radius = 114.547
+height = 3.92798
+
+[node name="root" type="Node"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+editor/display_folded = true
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+scroll/offset = Vector2( 0, 0 )
+scroll/base_offset = Vector2( 0, 0 )
+scroll/base_scale = Vector2( 1, 1 )
+scroll/limit_begin = Vector2( 0, 0 )
+scroll/limit_end = Vector2( 0, 0 )
+scroll/ignore_camera_zoom = true
+
+[node name="CityGrey25" type="ParallaxLayer" parent="ParallaxBackground"]
+
+transform/pos = Vector2( 0, -200 )
+transform/scale = Vector2( 1.2, 1.2 )
+motion/scale = Vector2( 0.6, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 3962.4, 0 )
+
+[node name="TextureFrame" type="TextureFrame" parent="ParallaxBackground/CityGrey25"]
+
+material/material = SubResource( 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 3302.0
+margin/bottom = 1017.0
+texture = ExtResource( 1 )
+modulate = Color( 0.8125, 0.8125, 0.8125, 1 )
+stretch_mode = 0
+
+[node name="CityGrey50" type="ParallaxLayer" parent="ParallaxBackground"]
+
+transform/pos = Vector2( -250, -150 )
+transform/scale = Vector2( 1.1, 1.1 )
+motion/scale = Vector2( 0.8, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 3632.2, 0 )
+
+[node name="TextureFrame" type="TextureFrame" parent="ParallaxBackground/CityGrey50"]
+
+material/material = SubResource( 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 3302.0
+margin/bottom = 1017.0
+texture = ExtResource( 1 )
+modulate = Color( 0.621094, 0.621094, 0.621094, 1 )
+stretch_mode = 0
+
+[node name="CityGrey75" type="ParallaxLayer" parent="ParallaxBackground"]
+
+transform/pos = Vector2( -500, -100 )
+motion/scale = Vector2( 1, 1 )
+motion/offset = Vector2( 0, 0 )
+motion/mirroring = Vector2( 3302, 0 )
+
+[node name="TextureFrame" type="TextureFrame" parent="ParallaxBackground/CityGrey75"]
+
+material/material = SubResource( 2 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 3302.0
+margin/bottom = 1017.0
+texture = ExtResource( 1 )
+modulate = Color( 0.394531, 0.394531, 0.394531, 1 )
+stretch_mode = 0
+
+[node name="Yoyogi1" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 3 )
+shapes/0/transform = Matrix32( 15.4685, 0, 0, 11.0034, 497.022, 303.998 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 4 )
+shapes/1/transform = Matrix32( 15.4685, 0, 0, 11.0034, 497.022, 303.998 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 5 )
+shapes/2/transform = Matrix32( 15.4685, 0, 0, 11.0034, 497.022, 303.998 )
+shapes/2/trigger = false
+shapes/3/shape = SubResource( 6 )
+shapes/3/transform = Matrix32( 15.4685, 0, 0, 11.0034, 497.022, 303.998 )
+shapes/3/trigger = false
+shapes/4/shape = SubResource( 7 )
+shapes/4/transform = Matrix32( 15.4685, 0, 0, 11.0034, 497.022, 303.998 )
+shapes/4/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Gras 1" type="Sprite" parent="Yoyogi1"]
+
+transform/pos = Vector2( 992.664, 869.752 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Yoyogi1"]
+
+transform/pos = Vector2( 497.022, 303.998 )
+transform/scale = Vector2( 15.4685, 11.0034 )
+build_mode = 0
+polygon = Vector2Array( -32.7245, 44.7096, -22.3162, 47.0725, 1.60343, 48.3448, 6.25806, 47.7995, 25.3291, 47.3451, 43.883, 45.164, 59.0259, 44.8004, 78.6142, 45.9819, 95.7741, 45.5275, 96.4206, 58.5235, -32.6978, 58.9779 )
+shape_range = Vector2( 0, 4 )
+trigger = false
+
+[node name="Baum1" type="Sprite" parent="Yoyogi1"]
+
+transform/pos = Vector2( 882.458, 607.436 )
+transform/scale = Vector2( 0.311431, 0.311431 )
+texture = ExtResource( 3 )
+
+[node name="Yoyogi2" type="StaticBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+shapes/1/shape = SubResource( 9 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
+shapes/2/shape = SubResource( 10 )
+shapes/2/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/2/trigger = false
+shapes/3/shape = SubResource( 11 )
+shapes/3/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/3/trigger = false
+shapes/4/shape = SubResource( 12 )
+shapes/4/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/4/trigger = false
+shapes/5/shape = SubResource( 13 )
+shapes/5/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/5/trigger = false
+shapes/6/shape = SubResource( 14 )
+shapes/6/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/6/trigger = false
+shapes/7/shape = SubResource( 15 )
+shapes/7/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/7/trigger = false
+collision/layers = 1
+collision/mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="Brücke" type="Sprite" parent="Yoyogi2"]
+
+transform/pos = Vector2( 2939.52, 773.52 )
+texture = ExtResource( 4 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Yoyogi2"]
+
+build_mode = 0
+polygon = Vector2Array( 1979.41, 807.956, 2236.41, 780.956, 2489.41, 760.955, 2738.88, 751.955, 2989.88, 749.955, 3273.88, 755.955, 3506.87, 765.955, 3732.87, 782.956, 3913.87, 801.956, 3914.87, 918.956, 3616.87, 861.956, 3371.87, 846.956, 3100.87, 840.956, 2856.42, 837.956, 2602.42, 843.956, 2354.41, 861.956, 2140.41, 883.956, 1990.41, 914.956 )
+shape_range = Vector2( 0, 7 )
+trigger = false
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+
+[node name="Vignette" type="Sprite" parent="HUD"]
+
+visibility/blend_mode = 3
+texture = ExtResource( 5 )
+centered = false
+
+[node name="Camera2D" type="Camera2D" parent="HUD"]
+
+anchor_mode = 0
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+script/script = ExtResource( 6 )
+
+[node name="Hero" type="KinematicBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 16 )
+shapes/0/transform = Matrix32( 0.418389, 0, 0, 0.488375, 361.306, 731.288 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 7 )
+
+[node name="limboboy" type="Sprite" parent="Hero"]
+
+transform/pos = Vector2( 366.308, 734.76 )
+transform/scale = Vector2( 0.3051, 0.3051 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hero"]
+
+transform/pos = Vector2( 361.306, 731.288 )
+transform/scale = Vector2( 0.418389, 0.488375 )
+shape = SubResource( 16 )
+trigger = false
+_update_shape_index = 0
+
+
